@@ -138,8 +138,8 @@
             하지만 줄바꿈을<p><p>
             몇번이나 하든<p><p><p>
             하나만 인식한다.<p>
-            때문에 별로 추천하지 않는다.<br><br>
-        <div>
+            때문에 별로 추천하지 않는다.
+        <div><br><br>
 
         <div>
             <h1>수평선</h1>          
@@ -154,6 +154,39 @@
             10px 검은색 절절반줄 <hr size="10px", width="25%", color="black">
             <b>align</b> 속성을 통해 상하좌우 정렬이 가능하다.<br>
             25px 왼쪽 주황색 절반줄 <hr size="25px", width="50%", color="orange", align="left">
+        </div><br><br>
+
+        <div>
+            <h1>목록</h1>
+            <b>&lt;ul&gt;</b>
+            <font size="2">=<b>U</b>nordered <b>L</b>ist</font>
+            <ul type="square">
+                <li>이 태그는 순서가 없는 목록을 표시합니다.</li>
+                <li>상위 목록은 &lt;ul&gt;, 하위 목록은 &lt;li&gt; 태그를 사용합니다</li>
+                <li>type 속성을 통해서 모양을 바꿀 수 있으며 disc, circle, square 총 3개가 있습니다</li>
+                <li type="disc">이 모양이 disc 입니다</li>
+                <li type="circle">이 모양이 circle 입니다</li>
+                <li type="square">이 모양이 square 입니다</li>
+                <ul type="disc">
+                    <li>하위 목록에 &lt;ul&gt; 태그를 또 사용하여 이처럼 표현할 수 있습니다.</li>
+                    <li>&lt;ul&gt; 와 &lt;li&gt; 태그 둘 다 type 속성이 있습니다.</li>
+                </ul>
+            </ul>
+            <b>&lt;ol&gt;</b>
+            <font size="2">=<b>o</b>rdered <b>L</b>ist</font>
+            <ol type="1">
+                <li>이 태그는 순서가 <b>있는</b> 목록을 표시합니다.</li>
+                <li>상위 목록은 &lt;ol&gt;, 하위 목록은 &lt;li&gt; 태그를 사용합니다</li>
+                <li>type 속성을 통해서 순서 문자를 바꿀 수 있으며 1, A, a, i, I 총 5개가 있습니다</li>
+                <li type="1">이 문자가 1 입니다</li>
+                <li type="A">이 문자가 A 입니다</li>
+                <li type="a">이 문자가 a 입니다</li>
+                <li type="i">이 문자가 i 입니다</li>
+                <li type="I">이 문자가 I 입니다</li>
+                <li type="1", value="100">&lt;li&gt; 태그는 value, &lt;ol&gt; 태그는 start 속성을 통해 특정 순서로 이동할 수도 있습니다</li>
+                <li type="1">시작 지점을 설정하는 것이므로 유의해야 합니다.</li>
+            </ol>
+
         </div>
     </body>
 </html>
