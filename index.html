@@ -120,14 +120,14 @@
             <pre>
 <b>&lt;pre&gt;</b><br>
 이 태그는 아래와 같이 줄바꿈, 사이띄기 등을 입력한 형태 그대로 유지한다.
-=======================
+=========================
     목록1   목록2   목록3
-=======================
+=========================
     가       A       1
     나       B       2
     다       C       3
     라       D       4
-=======================
+=========================
             </pre><br><br>
 
             <b>&lt;span&gt;</b><br>
@@ -147,11 +147,14 @@
             일반 줄 <hr>
             <b>size</b> 속성을 통해 크기 조절이 가능하다.<br>
             10px 줄 <hr size="10px"><br><br>
+
             <b>width</b> 속성을 통해 너비 조절이 가능하다.(px, %단위)<br>
             10px 100px줄 <hr size="10px", width="100px">
             10px 절반줄 <hr size="10px", width="50%"><br><Br>
+            
             <b>color</b> 속성을 통해 색 조절이 가능하다.<br>
             10px 검은색 절절반줄 <hr size="10px", width="25%", color="black"><br><br>
+
             <b>align</b> 속성을 통해 상하좌우 정렬이 가능하다.<br>
             25px 왼쪽 주황색 절반줄 <hr size="25px", width="50%", color="orange", align="left">
         </div><br><br>
@@ -207,20 +210,40 @@
             </ol>
             ex) ../htmllogo.jpg - 상위 폴더<br>
             /htmllogo.jpg - 최상위 폴더<br><br>
+            <!--개인용으론 절대링크(C:/User/user/document)로도 가능하겠지만,
+            상대링크를 사용하면 어디든지 적용이 가능하단 점이 있습니다.-->
 
             일반 불러오기<br>
             <img src=./htmllogo.jpg><br><br>
-
-            <b>width</b> 속성을 통해 너비 조정이 가능합니다.<br>
-            <img src=./htmllogo.jpg, width="100"><br><br>
+            <!--VSC에선 ctrl + 마우스 좌클릭으로 경로를 눌러서 이미지 확인이 가능합니다.-->
+            <b>width</b> 속성을 통해 이미지 크기를 설정할 수 있습니다.<br>
+            <img src=./htmllogo.jpg , width="100"><br><br>
 
             <b>alt</b> 속성을 통해 이미지를 불러올 수 없을 때 대체 문자를 설정할 수 있습니다.<br>
-            <img src=/htmllogo1.jpg, width="100", alt="html 로고"><br><br>
+            <img src=/htmllogo1.jpg , width="100", alt="html 로고"><br><br>
 
             <b>title</b> 속성을 통해 커서를 올렸을 때 나오는 문자를 설정할 수 있습니다.<br>
-            <img src=./htmllogo.jpg, width="100", title="html 로고"><br><br>
+            <img src=./htmllogo.jpg , width="100", title="html 로고"><br><br>
 
-            <b>align="middle"</b>속성으로 문장 중간에<img src=./htmllogo.jpg, align="middle">넣을 수 있습니다.
+            <b>border</b> 속성을 통해 이미지 테두리 두께를 설정할 수 있습니다.<br>
+            <img src=./htmllogo.jpg , width="100", border="5"><br>
+            
+            <img src=./htmllogo.jpg , width="100", align="left"><br>
+            <b>align="left"</b> 또는 <b>"align="right"</b> 속성을 사용하면 이미지 아래쪽의 내용이 이미지 옆에 나타납니다.<br>
+            이를 해결할려면 &lt;br clear=all&gt; clear 속성을 사용해야 합니다.<br clear=all><br>
+
+            <b>bspace</b> 속성을 통해 좌우여백을, <b>vspace</b> 속성을 통해 상하여백을 설정할 수 있습니다.<br>
+            <img src=./htmllogo.jpg , width="100", bspace="5", vspace="5", align="left"><br>
+            상하좌우여백 5<br clear=all><br> 
+
+            문장 중간에도<img src=./htmllogo.jpg , width="100">넣을 수 있습니다.<br><br>
+
+            <b>align</b> 속성을 통해 이미지 정렬이 가능합니다. top, middle, bottom은 옆의 글자들의 높낮이가 바뀌며 left, right는 이미지의 위치가 바뀝니다.<br>
+            <img src=./htmllogo.jpg , width="100", align="top">top<br clear=all><br>
+            <img src=./htmllogo.jpg , width="100", align="middle">middle<br clear=all><br>
+            <img src=./htmllogo.jpg , width="100", align="bottom">bottom<br clear=all><br>
+            <img src=./htmllogo.jpg , width="100", align="left">left<br clear=all><br>
+            <img src=./htmllogo.jpg , width="100", align="right">right<br clear=all><br>
         </div>
     </body>
 </html>
