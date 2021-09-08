@@ -6,7 +6,17 @@
 
     <body>
         <div>
-            <h1 align="center">기본 틀</h1>
+            <h3>목차</h3><br>
+            <a href="#기본">기본</a><br>
+            <a href="#문장 서식">문장 서식</a><br>
+            <a href="#문단 서식">문단 서식</a><br>
+            <a href="#목록">목록</a><br>
+            <a href="#이미지">이미지</a><br>
+            <a href="#링크">링크</a><br>
+
+        </div>
+        <div>
+            <a name="기본"><h1>기본 틀</h1></a>
             <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -43,9 +53,8 @@
             이 문서의 소스코드는 <a href="https://github.com/Sharlottes/html-guide/blob/main/index.html">여기</a>에 있습니다.
         </div><br><br>
 
-        <h1 align="center">기록된 태그들</h1>
         <div>
-            <h2>문장 서식 태그들</h2>
+            <a name="문장 서식"><h1>문장 서식</h1></a>
             normal<br><br>
             this is &lt;b&gt;<b>bold</b>&lt;/b&gt;<br>
             this is also &lt;strong&gt;<strong>bold</strong>&lt;/strong&gt;<br><br>
@@ -75,7 +84,7 @@
         </div><br><br><br>
 
         <div>
-            <h2>문단 서식 태그들</h2>
+            <a name="문단 서식"><h1>문단 서식</h1></a>
             <nobr>
                 <b>&lt;nobr&gt;</b><br>
                 보통 문장의 내용이 길어지면 화면의 끝에서
@@ -160,7 +169,7 @@
         </div><br><br>
 
         <div>
-            <h1>목록</h1>
+            <a name="목록"><h1>목록</h1></a>
             <b>&lt;ul&gt;</b>
             <font size="2">=<b>U</b>nordered <b>L</b>ist</font>
             <ul type="square">
@@ -199,7 +208,7 @@
         </div><br><br>
 
         <div>
-            <h1>이미지</h1>
+            <a name="이미지"><h1>이미지</h1></a>
             <b>&lt;img&gt;</b> 태그는 src 속성에 이미지 경로를 넣어서 이미지를 불러올 수 있습니다<br>
             경로를 표시하는 방법엔
             <ol type="1">
@@ -244,6 +253,16 @@
             <img src=./htmllogo.jpg , width="100", align="bottom">bottom<br clear=all><br>
             <img src=./htmllogo.jpg , width="100", align="left">left<br clear=all><br>
             <img src=./htmllogo.jpg , width="100", align="right">right<br clear=all><br>
+        </div><br><br>
+
+        <div>
+            <a name="링크"><h1>링크</h1></a>
+            &lt;a&gt; 태그를 통해서 링크를 설정할 수 있다.<br><br>
+            <h2>1. 같은 문서 내 이동</h2>
+            &lt;a name="이름"&gt; 으로 이동할 위치를 지정한 다음, &lt;a href="#이름"&gt; 으로 링크를 설정한다.<br><br>
+            
+            <h2>2. 다른 문서로 이동</h2>
+            &lt;a href="URL"&gt; 으로 링크를 설정한다.<br><br>
         </div>
     </body>
 </html>
