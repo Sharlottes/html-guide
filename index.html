@@ -90,31 +90,28 @@
             <a name="문장 서식"><h1>문장 서식</h1></a>
             문장 서식은 중첩되는 태그가 많다. 처음엔 익숙한 것 하나부터 익혀가는게 좋다.<br><br>
 
-            this is &lt;b&gt;<b>bold</b>&lt;/b&gt;<br>
-            this is also &lt;strong&gt;<strong>bold</strong>&lt;/strong&gt;<br><br>
+            this is &lt;b&gt;<b>굵은 태그</b>&lt;/b&gt;<br>
+            this is also &lt;strong&gt;<strong>굵은 태그</strong>&lt;/strong&gt;<br><br>
 
-            this is &lt;i&gt;<i>slide</i>&lt;/i&gt;<br>
-            this is also &lt;em&gt;<em>slide</em>&lt;/em&gt;<br><br>
-            this is also &lt;address&gt;<address>slide</address>&lt;/address&gt;<br><br>
+            this is &lt;i&gt;<i>기울기 태그</i>&lt;/i&gt;<br>
+            this is also &lt;em&gt;<em>기울기 태그</em>&lt;/em&gt;<br><br>
+            this is &lt;address&gt;<address>주소용 태그</address>&lt;/address&gt;<br><br>
 
-            this is &lt;u&gt;<u>underline</u>&lt;/u&gt;<br><br>
-            this is also &lt;ins&gt;<ins>underline</ins>&lt;/ins&gt;<br><br>
+            this is &lt;u&gt;<u>밑줄선 태그</u>&lt;/u&gt;<br><br>
+            this is also &lt;ins&gt;<ins>밑줄선 태그</ins>&lt;/ins&gt;<br><br>
 
-            this is &lt;s&gt;<s>midline</s>&lt;/s&gt;<br>
-            this is also &lt;strike&gt;<strike>midline</strike>&lt;/strike&gt;<br><br>
-            this is also &lt;del&gt;<del>midline</del>&lt;/del&gt;<br><br>
+            this is &lt;s&gt;<s>취소선 태그</s>&lt;/s&gt;<br>
+            this is also &lt;del&gt;<del>취소선 태그</del>&lt;/del&gt;<br><br>
 
-            this is &lt;tt&gt;<tt>tt tag</tt>&lt;/tt&gt;<br><br>
+            this is<sup>&lt;sup&gt;위첨자 태그&lt;/sup&gt;</sup><br><br>
 
-            this is<sup>&lt;sup&gt;superscript&lt;/sup&gt;</sup><br><br>
+            this is<sub>&lt;sub&gt;아래첨자 태그&lt;/sub&gt;</sub><br><br>
 
-            this is<sub>&lt;sub&gt;subscript&lt;/sub&gt;</sub><br><br>
+            this is<mark>&lt;mark&gt;강조 태그&lt;/mark&gt;</mark><br><br>
 
-            this is<mark>&lt;mark&gt;highlighing&lt;/mark&gt;</mark><br><br>
+            this is<q>&lt;q&gt;인용구 태그&lt;/q&gt;</q><br><br>
 
-            this is<q>&lt;q&gt;quotation&lt;/q&gt;</q><br><br>
-
-            this is<abbr title="커서를 올려 보세요">&lt;abbr title="커서를 올려 보세요"&gt;abbreviation&lt;/abbr&gt;</abbr><br><br>
+            this is<abbr title="커서를 올려 보세요">&lt;abbr title="커서를 올려 보세요"&gt;줄임말 태그&lt;/abbr&gt;</abbr><br><br>
 
             <h2>문자 엔티티</h2>
             &amp;lt; == &lt; <br>
@@ -193,10 +190,11 @@
             몇번이나 하든<p><p><p>
             하나만 인식한다.<p>
             때문에 별로 추천하지 않는다.
+            </p></p></p></p></p></p>
         <div><br><br>
 
         <div>
-            <h1>수평선</h1>          
+            <h1>수평선</h1>
             <b>&lt;hr&gt;</b><br>
             일반 줄 <hr>
             <b>size</b> 속성을 통해 크기 조절이 가능하다.<br>
@@ -341,7 +339,10 @@
             <ul>
                 <li><b>중괄호</b>는 필수입니다.</li>
                 <li>각 속성을 구분하기 위해서 <b>:</b>와 <b>;</b>는 필수입니다.</li>
-            </ul> 
+            </ul>
+            선택자는 이 속성들<sup>스타일</sup>을 적용할 대상을 말하며, HTML 태그, id&class 이름 등이 해당됩니다.<br>
+            콤마를 통해 선택자를 2개 이상 설정할 수도 있습니다.<br><br>
+
             <table>
                 <tr bgcolor="gray">
                     <th>선택자 이름</th>
@@ -374,6 +375,37 @@
                     <td>a:hover<br>&lt;a&gt; 를 선택하지만, 마우스 포인터가 링크위에 있을 때만 선택함</td>
                 </tr>
             </table>
+
+            <h2>CSS 색상값</h2>
+            일부 속성들(ex: color, background)의 속성값은 색상값이며, 별도의 키워드를 지원합니다.<br>
+            <ul>
+                <li>16진수 6자리: #rrggbb</li>
+                <li>16진수 3자리: #rgb</li>
+                <li>10진수; rgb(255, 0, 0)</li>
+                <li>퍼센트: rgb(100%, 0%, 0%)</li>
+                <li><a href="https://developer.mozilla.org/ko/docs/Web/CSS/color_value">그 외 고유 키워드들</a></li>
+            </ul><br><br>
+
+            <h2>CSS 길이단위</h2>
+            일부 속성들(ex: width, height)의 속성값은 길이값이며, 별도의 단위를 지원합니다.<br>
+            <ul>
+                <li>절대 단위</li>
+                <ul>
+                    <li>mm(밀리미터)</li>
+                    <li>cm(센티미터)</li>
+                    <li>in(인치, =2.54cm)</li>
+                    <li>pt(포인트, =1/72in)</li>
+                    <li>pc(파이카, 12pt)</li>
+                </ul>
+                <li>상대 단위</li>
+                <ul>
+                    <li>px(픽셀)</li>
+                    <li>em(부모요소의 폰트크기 속성값을 1로하는 단위)</li>
+                    <li>ex(부모요소의 소문자 'x'의 높이를 1로하는 단위)</li>
+                </ul>
+            </ul><br><br>
+
+            <font style="color:red">참고: </font>자식요소는 부모요소의 스타일을 함께 상속받습니다.<br> 
         </div>
     </body>
 </html>
