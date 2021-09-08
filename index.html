@@ -197,7 +197,30 @@
 
         <div>
             <h1>이미지</h1>
-            
+            <b>&lt;img&gt;</b> 태그는 src 속성에 이미지 경로를 넣어서 이미지를 불러올 수 있습니다<br>
+            경로를 표시하는 방법엔
+            <ol type="1">
+                <li>현재폴더: .</li>
+                <li>상위폴더: ..</li>
+                <li>최상위폴더: /</li>
+                <li>하위폴더: 폴더명</li>
+            </ol>
+            ex) ../htmllogo.jpg - 상위 폴더<br>
+            /htmllogo.jpg - 최상위 폴더<br><br>
+
+            일반 불러오기<br>
+            <img src=./htmllogo.jpg><br><br>
+
+            <b>width</b> 속성을 통해 너비 조정이 가능합니다.<br>
+            <img src=./htmllogo.jpg, width="100"><br><br>
+
+            <b>alt</b> 속성을 통해 이미지를 불러올 수 없을 때 대체 문자를 설정할 수 있습니다.<br>
+            <img src=/htmllogo1.jpg, width="100", alt="html 로고"><br><br>
+
+            <b>title</b> 속성을 통해 커서를 올렸을 때 나오는 문자를 설정할 수 있습니다.<br>
+            <img src=./htmllogo.jpg, width="100", title="html 로고"><br><br>
+
+            <b>align="middle"</b>속성으로 문장 중간에<img src=./htmllogo.jpg, align="middle">넣을 수 있습니다.
         </div>
     </body>
 </html>
