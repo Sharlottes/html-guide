@@ -2,11 +2,13 @@
 <html>
     <head>
         <title>Example Document</title>
+        <link href="./styles/style.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
     </head>
 
     <body>
         <div>
-            <h3>목차</h3><br>
+            <h3 id="midpurple">목차</h3><br>
             <a href="#속성">속성</a><br>
             <a href="#문서 메타데이터">문서 메타데이터</a><br>
             <a href="#기본">기본</a><br>
@@ -16,6 +18,7 @@
             <a href="#이미지">이미지</a><br>
             <a href="#링크">링크</a><br>
             <a href="#프레임">프레임</a><br>
+            <a href="#스타일">스타일</a><br>
 
         </div>
         <div>
@@ -259,42 +262,42 @@
                 <li>최상위폴더: /</li>
                 <li>하위폴더: 폴더명</li>
             </ol>
-            ex) ../htmllogo.jpg - 상위 폴더<br>
+            ex) ./htmllogo.jpg - 상위 폴더<br>
             /htmllogo.jpg - 최상위 폴더<br><br>
             <!--개인용으론 절대링크(C:/User/user/document)로도 가능하겠지만,
             상대링크를 사용하면 어디든지 적용이 가능하단 점이 있습니다.-->
 
             일반 불러오기<br>
-            <img src=./htmllogo.jpg><br><br>
+            <img src=./images/htmllogo.jpg><br><br>
             <!--VSC에선 ctrl + 마우스 좌클릭으로 경로를 눌러서 이미지 확인이 가능합니다.-->
             <b>width</b> 속성을 통해 이미지 크기를 설정할 수 있습니다.<br>
-            <img src=./htmllogo.jpg , width="100"><br><br>
+            <img src=./images/htmllogo.jpg , width="100"><br><br>
 
             <b>alt</b> 속성을 통해 이미지를 불러올 수 없을 때 대체 문자를 설정할 수 있습니다.<br>
             <img src=/htmllogo1.jpg , width="100", alt="html 로고"><br><br>
 
             <b>title</b> 속성을 통해 커서를 올렸을 때 나오는 문자를 설정할 수 있습니다.<br>
-            <img src=./htmllogo.jpg , width="100", title="html 로고"><br><br>
+            <img src=./images/htmllogo.jpg , width="100", title="html 로고"><br><br>
 
             <b>border</b> 속성을 통해 이미지 테두리 두께를 설정할 수 있습니다.<br>
-            <img src=./htmllogo.jpg , width="100", border="5"><br>
+            <img src=./images/htmllogo.jpg , width="100", border="5"><br>
             
-            <img src=./htmllogo.jpg , width="100", align="left"><br>
+            <img src=./images/htmllogo.jpg , width="100", align="left"><br>
             <b>align="left"</b> 또는 <b>"align="right"</b> 속성을 사용하면 이미지 아래쪽의 내용이 이미지 옆에 나타납니다.<br>
             이를 해결할려면 &lt;br clear=all&gt; clear 속성을 사용해야 합니다.<br clear=all><br>
 
             <b>bspace</b> 속성을 통해 좌우여백을, <b>vspace</b> 속성을 통해 상하여백을 설정할 수 있습니다.<br>
-            <img src=./htmllogo.jpg , width="100", bspace="5", vspace="5", align="left"><br>
+            <img src=./images/htmllogo.jpg , width="100", bspace="5", vspace="5", align="left"><br>
             상하좌우여백 5<br clear=all><br> 
 
-            문장 중간에도<img src=./htmllogo.jpg , width="100">넣을 수 있습니다.<br><br>
+            문장 중간에도<img src=./images/htmllogo.jpg , width="100">넣을 수 있습니다.<br><br>
 
             <b>align</b> 속성을 통해 이미지 정렬이 가능합니다. top, middle, bottom은 옆의 글자들의 높낮이가 바뀌며 left, right는 이미지의 위치가 바뀝니다.<br>
-            <img src=./htmllogo.jpg , width="100", align="top">top<br clear=all><br>
-            <img src=./htmllogo.jpg , width="100", align="middle">middle<br clear=all><br>
-            <img src=./htmllogo.jpg , width="100", align="bottom">bottom<br clear=all><br>
-            <img src=./htmllogo.jpg , width="100", align="left">left<br clear=all><br>
-            <img src=./htmllogo.jpg , width="100", align="right">right<br clear=all><br>
+            <img src=./images/htmllogo.jpg , width="100", align="top">top<br clear=all><br>
+            <img src=./images/htmllogo.jpg , width="100", align="middle">middle<br clear=all><br>
+            <img src=./images/htmllogo.jpg , width="100", align="bottom">bottom<br clear=all><br>
+            <img src=./images/htmllogo.jpg , width="100", align="left">left<br clear=all><br>
+            <img src=./images/htmllogo.jpg , width="100", align="right">right<br clear=all><br>
         </div><br><br>
 
         <div>
@@ -313,14 +316,64 @@
             <b>&lt;iframe&gt;</b> <font size="2">=<b>I</b>nline <b>F</b>rame</font> 태그를 통해서 다른 문서를 페이지 내부에서 보여줄 수 있다.<br><br>
             
             <b>src="url, 문서 이름"</b> 속성을 통해 대상 문서를 지정할 수 있다.<br>
-            
+            <b>align</b> 속성을 통해 정렬할 수 있다.<br>
+
             <br><br><br>
             <iframe src="./frame1.html" style="width:100%; height:300px; border: 3px double mediumslateblue" scrolling="yes" align="center" name="f1"></iframe><br><br>
+
+            <b>&lt;a&gt;</b> 태그의 <b>target</b>에서 <b>&lt;iframe&gt;</b>의 <b>name</b>속성값을 넣어서 링크를 누르면 프레임이 전환되게 만들 수 있다.<br><br>
 
             <p>
                 <a href="./frame1.html" target="f1">프레임1 열기</a>
                 <a href="./frame2.html" target="f1">프레임2 열기</a>
             </p>
+        </div><br><br>
+
+        <div>
+            <a name="스타일"><h1>스타일</h1></a>
+            스타일은 주로 CSS를 통해서 꾸며진다. CSS는 스타일 표 언어이며, <b>&lt;link&gt;</b>를 통해 스타일을 미리 정의하여 가져올 수 있거나 <b>&lt;style&gt;</b>를 통해 일회용으로 바로 만들 수도 있다.<br><br>
+            <b>&lt;style&gt;</b>는 거의 대부분의 태그의 속성이며, 선택자와 중괄호를 제외한 부분이 속성값이다. (style: "color:red;")<br><br>
+            
+            <b>&lt;link&gt;</b>는 CSS파일을 통째로 불러들이는 방식이며, &lt;link href="파일명" rel="stylesheet" type="text/css"&gt;를 &lt;head&gt; &lt;/head&gt; 사이에 넣으면 된다.<br>
+            
+            CSS 파일에선 <b>선택자</b> {<br><b>속성</b>: <b>속성값</b>;<br>}; 와 같이 작성합니다.<br>
+            이때 지켜야 할 규칙이 있습니다.<br>
+            <ul>
+                <li><b>중괄호</b>는 필수입니다.</li>
+                <li>각 속성을 구분하기 위해서 <b>:</b>와 <b>;</b>는 필수입니다.</li>
+            </ul> 
+            <table>
+                <tr bgcolor="gray">
+                    <th>선택자 이름</th>
+                    <th>선택하는 것</th>
+                    <th>예시</th>
+                </tr>
+                <tr>
+                    <td>요소 선택자 (때때로 태그 또는 타입 선택자라 불림)</td>
+                    <td>특정 타입의 모든 HTML 요소.</td>
+                    <td>p<br>&lt;p&gt;를 선택</td>
+                </tr>
+                <tr>
+                    <td>아이디 선택자</td>
+                    <td>특정 아이디를 가진 페이지의 요소<br>(주어진 HTML 페이지에서, 아이디당 딱 하나의 요소만 허용됩니다).</td>
+                    <td>#my-id<br>&lt;p id="my-id"&gt;  또는  &lt;a id="my-id"&gt; 를 선택</td>
+                </tr>
+                <tr>
+                    <td>클래스 선택자</td>
+                    <td>특정 클래스를 가진 페이지의 요소<br>(한 페이지에 클래스가 여러번 나타날 수 있습니다).</td>
+                    <td>.my-class<br>&lt;p class="my-class"&gt; 와 &lt;a class="my-class"&gt; 를 선택</td>
+                </tr>
+                <tr>
+                    <td>속성 선택자</td>
+                    <td>특정 속성을 갖는 페이지의 요소.</td>
+                    <td>img[src]<br>&lt;img src="myimage.png"&gt; 를 선택하지만 &lt;img&gt;는 선택 안함</td>
+                </tr>
+                <tr>
+                    <td>수도(Pseudo) 클래스 선택자</td>
+                    <td>특정 요소이지만 특정 상태에 있을 때만, 예를 들면, hover over 상태일 때.</td>
+                    <td>a:hover<br>&lt;a&gt; 를 선택하지만, 마우스 포인터가 링크위에 있을 때만 선택함</td>
+                </tr>
+            </table>
         </div>
     </body>
 </html>
