@@ -7,6 +7,8 @@
     <body>
         <div>
             <h3>목차</h3><br>
+            <a href="#속성">속성</a><br>
+            <a href="#문서 메타데이터">문서 메타데이터</a><br>
             <a href="#기본">기본</a><br>
             <a href="#문장 서식">문장 서식</a><br>
             <a href="#문단 서식">문단 서식</a><br>
@@ -55,31 +57,69 @@
         </div><br><br>
 
         <div>
+            <a name="속성"><h1>속성</h1></a>
+            <b>&lt;tag pro="para"&gt;inside&lt;/tag&gt;</b>:<br>
+                <ul type="circle">
+                    <li><b>tag</b>: 태그 이름입니다. &lt;/tag&gt;로 태그를 닫을 수 있지만, 일부 태그는 생략할 수 있습니다.</li>
+                    <li><b>pro</b>: 속성 이름입니다.</li>
+                    <li><b>"para"</b>: 속성값입니다. 큰따음표는 필수가 아니지만, 속성의 구분은 띄워쓰기로 구분되므로 큰따음표로 속성값에 의해 띄워쓰여지는 문제를 막을 수 있습니다.</li>
+                    <li><b>inside</b>: 내용입니다. </li>
+                </ul>
+        </div><br><br>
+
+        <div>
+            <a name="문서 메타데이터"><h1>문서 메타데이터</h1></a>
+            <b>&lt;!DOCTYPE html&gt;</b>: 현재 문서가 HTML5 문서임을 명시합니다.<br>
+            <b>&lt;head&gt;</b>: HTML 문서의 메타데이터를 설정합니다.<br>
+            <blockquote>
+                <b>&lt;title&gt;</b>: HTML 문서의 제목을 정의하며, 브라우저의 툴바나 즐겨찾기, 검색엔진 결과의 제목에 표시됩니다.<br>
+                <b>&lt;meta&gt;</b>:<br>
+                    <ul type="circle">
+                        <li><b>charset</b> 속성으로 인코더(ex: ascii, ansi, iso-8859-1, utf-8)를 설정할 수 있습니다.</li>
+                        <li><b>name</b>와 <b>description</b> 속성으로 이름과 설명을 넣어서 검색 엔진에 더 잘 노출되게 할 수 있습니다.</li>
+                        <li><b>lang</b> 속성으로 페이지의 언어를 설정할 수 있는데, 이는 &lt;span&gt; 태그에도 쓰여 <b>각 언어에 따른 문자</b>를 설정할 수 있습니다.</li>
+                        <li>그 외에도 여러 SNS에서 독점 속성을 가지고 있습니다.</li>
+                    </ul><br>
+            </blockquote>
+        </div><br><br>
+
+        <div>
             <a name="문장 서식"><h1>문장 서식</h1></a>
-            normal<br><br>
+            문장 서식은 중첩되는 태그가 많다. 처음엔 익숙한 것 하나부터 익혀가는게 좋다.<br><br>
+
             this is &lt;b&gt;<b>bold</b>&lt;/b&gt;<br>
             this is also &lt;strong&gt;<strong>bold</strong>&lt;/strong&gt;<br><br>
 
             this is &lt;i&gt;<i>slide</i>&lt;/i&gt;<br>
             this is also &lt;em&gt;<em>slide</em>&lt;/em&gt;<br><br>
+            this is also &lt;address&gt;<address>slide</address>&lt;/address&gt;<br><br>
 
             this is &lt;u&gt;<u>underline</u>&lt;/u&gt;<br><br>
+            this is also &lt;ins&gt;<ins>underline</ins>&lt;/ins&gt;<br><br>
 
             this is &lt;s&gt;<s>midline</s>&lt;/s&gt;<br>
             this is also &lt;strike&gt;<strike>midline</strike>&lt;/strike&gt;<br><br>
+            this is also &lt;del&gt;<del>midline</del>&lt;/del&gt;<br><br>
 
             this is &lt;tt&gt;<tt>tt tag</tt>&lt;/tt&gt;<br><br>
 
-            this is<sup>&lt;sup&gt;up string&lt;/sup&gt;</sup><br><br>
+            this is<sup>&lt;sup&gt;superscript&lt;/sup&gt;</sup><br><br>
 
-            this is<sub>&lt;sub&gt;down string&lt;/sub&gt;</sub><br><br>
+            this is<sub>&lt;sub&gt;subscript&lt;/sub&gt;</sub><br><br>
 
+            this is<mark>&lt;mark&gt;highlighing&lt;/mark&gt;</mark><br><br>
 
+            this is<q>&lt;q&gt;quotation&lt;/q&gt;</q><br><br>
+
+            this is<abbr title="커서를 올려 보세요">&lt;abbr title="커서를 올려 보세요"&gt;abbreviation&lt;/abbr&gt;</abbr><br><br>
+
+            <h2>문자 엔티티</h2>
             &amp;lt; == &lt; <br>
             &amp;gt; == &gt; <br>
             &amp;amp; == &amp; <br>
             &amp;quot; == &quot; <br>
-            &amp;nbsp; == whitespace<br><br>
+            &amp;apos; == &apos; <br>
+            &amp;nbsp; == 공백<br><br>
             
             &lt;font color="red"&gt;string&lt;/font&gt; == <font color = "red">string</font>
         </div><br><br><br>
@@ -95,7 +135,7 @@
 
             .
             <p align="left">
-                <b>&lt;p&gt;</b><br>
+                <b>&lt;p&gt;</b><font size="2"> =<b>P</b>aragraph</font><br>
                 이 태그는 줄바꿈 기능이 있고,
                 태그 앞뒤에 자동으로 빈 줄이 생긴다.<br>
                 align 속성을 통해 left, center, right 정렬도 가능하다.
@@ -115,7 +155,8 @@
             <blockquote>
                 <b>&lt;blockquote&gt;</b><br>
                 이 태그도 &lt;p&gt;처럼 줄바꿈 기능이 있으며,
-                자동으로 들여쓰기가 된다.
+                자동으로 들여쓰기가 된다.<br>
+                블록 인용구로 쓰인다.
             </blockquote>
             .<br><br>
 
@@ -277,8 +318,8 @@
             <iframe src="./frame1.html" style="width:100%; height:300px; border: 3px double mediumslateblue" scrolling="yes" align="center" name="f1"></iframe><br><br>
 
             <p>
-                <a href="./frame2.html" target="f1">프레임2 열기</a>
                 <a href="./frame1.html" target="f1">프레임1 열기</a>
+                <a href="./frame2.html" target="f1">프레임2 열기</a>
             </p>
         </div>
     </body>
