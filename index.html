@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example Document</title>
+    </head>
+
+    <body>
+        <div>
+            <h1 align="center">Title</h1>
+            <h2>notepads</h2>
+            normal<br><br>
+            this is &lt;b&gt;<b>bold</b>&lt;/b&gt;<br>
+            this is also &lt;strong&gt;<strong>bold</strong>&lt;/strong&gt;<br><br>
+
+            this is &lt;i&gt;<i>slide</i>&lt;/i&gt;<br>
+            this is also &lt;em&gt;<em>slide</em>&lt;/em&gt;<br><br>
+
+            this is &lt;u&gt;<u>underline</u>&lt;/u&gt;<br><br>
+
+            this is &lt;s&gt;<s>midline</s>&lt;/s&gt;<br>
+            this is also &lt;strike&gt;<strike>midline</strike>&lt;/strike&gt;<br><br>
+
+            this is &lt;tt&gt;<tt>tt tag</tt>&lt;/tt&gt;<br><br>
+
+            this is<sup>&lt;sup&gt;up string&lt;/sup&gt;</sup><br><br>
+
+            this is<sub>&lt;sub&gt;down string&lt;/sub&gt;</sub><br><br>
+
+
+            &amp;lt; == &lt; <br>
+            &amp;gt; == &gt; <br>
+            &amp;amp; == &amp; <br>
+            &amp;quot; == &quot; <br>
+            &amp;nbsp; == whitespace<br><br>
+            
+            &lt;font color="red"&gt;string&lt;/font&gt; == <font color = "red">string</font>
+        </div><br><br><br>
+
+        <nobr>
+            <b>&lt;nobr&gt;</b><br>
+            보통 문장의 내용이 길어지면 화면의 끝에서
+            자동으로 줄바꿈이 일어나지만 nobr 태그로 막을 수 있다.<br>
+            &lt;br&gt;를 통한 강제 줄바꿈은 이루어진다.
+        </nobr><br><br>
+
+        .
+        <p align="left">
+            <b>&lt;p&gt;</b><br>
+            이 태그는 줄바꿈 기능이 있고,
+            태그 앞뒤에 자동으로 빈 줄이 생긴다.<br>
+            align 속성을 통해 left, center, right 정렬도 가능하다.
+        </p>
+        .<br><br>
+
+        .
+        <div align="left">
+            <b>&lt;div&gt;</b><br>
+            이 태그도 줄바꿈 기능이 있지만,
+            &lt;p&gt;와 달리 앞뒤에 빈 줄이 없다.<br>
+            align 속성을 통해 left, center, right 정렬도 가능하다.
+        </div>
+        .<br><br>
+
+        .
+        <blockquote>
+            <b>&lt;blockquote&gt;</b><br>
+            이 태그도 &lt;p&gt;처럼 줄바꿈 기능이 있으며,
+            자동으로 들여쓰기가 된다.
+        </blockquote>
+        .<br><br>
+
+        .
+        <center>
+            <b>&lt;center&gt;</b><br>
+            이 태그도 &lt;div&gt;처럼 줄바꿈 기능이 있으며,
+            강제 중앙정렬이 된다.
+        </center>
+        .<br><br>
+
+        <pre>
+<b>&lt;pre&gt;</b><br>
+이 태그는 아래와 같이 줄바꿈, 사이띄기 등을 입력한 형태 그대로 유지한다.
+=======================
+    목록1   목록2   목록3
+=======================
+    가       A       1
+    나       B       2
+    다       C       3
+    라       D       4
+=======================
+        </pre><br><br>
+
+        <b>&lt;span&gt;</b><br>
+        이 태그는 다른 문장과 어울리면서 영역을 구성하는데 주로 쓰인다.<br>
+        대개 타 문장을 유지하면서 <span style="color:red;">속성값을 적용</span>할 때 쓰인다.<br><br>
+
+        &lt;p&gt; 태그는 &lt;/p&gt; 태그 없이 홀로 사용되면 &lt;br&gt;와 같은 줄바꿈 용도로 쓰인다.<br>
+        하지만 줄바꿈을<p><p>
+        몇번이나 하든<p><p><p>
+        하나만 인식한다.<p>
+        때문에 별로 추천하지 않는다.<br><br>
+
+        <b>&lt;hr&gt;</b><br>
+        일반 줄 <hr>
+        <b>size</b> 속성을 통해 크기 조절이 가능하다.<br>
+        10px 줄 <hr size="10px">
+        <b>width</b> 속성을 통해 너비 조절이 가능하다.(px, %단위)<br>
+        10px 100px줄 <hr size="10px", width="100px">
+        10px 절반줄 <hr size="10px", width="50%">
+        <b>color</b> 속성을 통해 색 조절이 가능하다.<br>
+        10px 검은색 절절반줄 <hr size="10px", width="25%", color="black">
+        <b>align</b> 속성을 통해 상하좌우 정렬이 가능하다.<br>
+        25px 왼쪽 주황색 절반줄 <hr size="25px", width="50%", color="orange", align="left">
+    </body>
+</html>
