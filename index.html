@@ -18,6 +18,7 @@
             <a href="#이미지">이미지</a><br>
             <a href="#링크">링크</a><br>
             <a href="#프레임">프레임</a><br>
+            <a href="#표">표</a><br>
             <a href="#스타일">스타일</a><br>
 
         </div>
@@ -81,14 +82,14 @@
                         <li><b>charset</b> 속성으로 인코더(ex: ascii, ansi, iso-8859-1, utf-8)를 설정할 수 있습니다.</li>
                         <li><b>name</b>와 <b>description</b> 속성으로 이름과 설명을 넣어서 검색 엔진에 더 잘 노출되게 할 수 있습니다.</li>
                         <li><b>lang</b> 속성으로 페이지의 언어를 설정할 수 있는데, 이는 &lt;span&gt; 태그에도 쓰여 <b>각 언어에 따른 문자</b>를 설정할 수 있습니다.</li>
-                        <li>그 외에도 여러 SNS에서 독점 속성을 가지고 있습니다.</li>
+                        <li>그 외에도 여러 SNS(ex: facebook, twitch)에서 독점 속성을 가지고 있습니다.</li>
                     </ul><br>
             </blockquote>
         </div><br><br>
 
         <div>
             <a name="문장 서식"><h1>문장 서식</h1></a>
-            문장 서식은 중첩되는 태그가 많다. 처음엔 익숙한 것 하나부터 익혀가는게 좋다.<br><br>
+            문장 서식은 중첩되는 태그가 많다. 처음엔 필요한 것부터 익혀가는게 좋다.<br><br>
 
             this is &lt;b&gt;<b>굵은 태그</b>&lt;/b&gt;<br>
             this is also &lt;strong&gt;<strong>굵은 태그</strong>&lt;/strong&gt;<br><br>
@@ -302,11 +303,38 @@
             <a name="링크"><h1>링크</h1></a>
             <b>&lt;a&gt;</b> 태그를 통해서 링크를 설정할 수 있다.<br><br>
 
-            <b>1. 같은 문서 내 이동</b><br>
+            <b>같은 문서 내 이동</b><br>
             &lt;a name="이름"&gt; 으로 이동할 위치를 지정한 다음, &lt;a href="#이름"&gt; 으로 링크를 설정한다.<br><br>
             
-            <b>2. 다른 문서로 이동</b><br>
-            &lt;a href="URL"&gt; 으로 링크를 설정한다.<br><br>
+            <b>다른 문서로 이동</b><br>
+            &lt;a href="URL, 경로"&gt; 로 링크를 설정한다.<br><br>
+
+            <b>링크 상태</b>
+            CSS에서 a.&lt;링크 상태&gt; 태그 식별자로 사용할 수 있다.<br><br>
+
+            <table>
+                <caption>link status table</caption>
+                <tr style="background-color: mediumpurple;">
+                    <th>링크의 상태</th>
+                    <th>설명</th>
+                </tr>
+                <tr>
+                    <td align="center">link</td>
+                    <td>아직 한 번도 방문한 적이 없는 상태 (기본설정)</td>
+                </tr>
+                <tr>
+                    <td align="center">visited</td>
+                    <td>한 번이라도 방문한 적이 있는 상태</td>
+                </tr>
+                <tr>
+                    <td align="center">hover</td>
+                    <td>링크 위에 마우스를 올려놓은 상태</td>
+                </tr>
+                <tr>
+                    <td align="center">active</td>
+                    <td>링크를 마우스로 누르고 있는 상태</td>
+                </tr>
+            </table>
         </div><br><br>
 
         <div>
@@ -327,6 +355,54 @@
             </p>
         </div><br><br>
 
+        <div>
+            <a name="표"><h1>표</h1></a>
+            <b>&lt;table&gt;<th/b>: 표 태그입니다. 이 하나로는 제대로된 표를 구성할 수 없습니다.<br>
+            <b>&lt;caption&gt;</b>: 표 소제목입니다. 표 가장 위에 작은 글씨로 표시됩니다.<br>
+            <b>&lt;tr&gt;</b>: =<b>T</b>able <b>R</b>ow, 표의 행입니다.<br>
+            <b>&lt;th&gt;</b>: =<b>T</b>able <b>H</b>ead, 표의 각 열의 제목입니다. 자동으로 굵은 글씨와 가운데 정렬이 됩니다.<br>
+            <b>&lt;td&gt;</b>: 표의 각 셀로 나눠줍니다.<br>
+            <pre>
+&lt;table&gt;
+    &lt;caption&gt;제목&lt;/caption&gt;
+    &lt;tr&gt;
+        &lt;th&gt;이름&lt;/th&gt;
+        &lt;th&gt;주소&lt;/th&gt;
+        &lt;th&gt;점수&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;홍길동&lt;/td&gt;
+        &lt;td&gt;조선&lt;/td&gt;
+        &lt;td&gt;90점&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;김철수&lt;/td&gt;
+        &lt;td&gt;한국&lt;/td&gt;
+        &lt;td&gt;85점&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+            </pre><br><br>
+        
+            결과<br>
+            <table>
+                <caption>제목</caption>
+                <tr>
+                    <th>이름</th>
+                    <th>주소</th>
+                    <th>점수</th>
+                </tr>
+                <tr>
+                    <td>홍길동</td>
+                    <td>조선</td>
+                    <td>90점</td>
+                </tr>
+                <tr>
+                    <td>김철수</td>
+                    <td>한국</td>
+                    <td>85점</td>
+                </tr>
+            </table><br>
+        </div><br><br>
         <div>
             <a name="스타일"><h1>스타일</h1></a>
             스타일은 주로 CSS를 통해서 꾸며진다. CSS는 스타일 표 언어이며, <b>&lt;link&gt;</b>를 통해 스타일을 미리 정의하여 가져올 수 있거나 <b>&lt;style&gt;</b>를 통해 일회용으로 바로 만들 수도 있다.<br><br>
@@ -377,7 +453,7 @@
             </table>
 
             <h2>CSS 색상값</h2>
-            일부 속성들(ex: color, background)의 속성값은 색상값이며, 별도의 키워드를 지원합니다.<br>
+            일부 속성들(ex: color, background-color)의 속성값은 색상값이며, 별도의 키워드를 지원합니다.<br>
             <ul>
                 <li>16진수 6자리: #rrggbb</li>
                 <li>16진수 3자리: #rgb</li>
@@ -405,7 +481,11 @@
                 </ul>
             </ul><br><br>
 
-            <font style="color:red">참고: </font>자식요소는 부모요소의 스타일을 함께 상속받습니다.<br> 
+            <h2>CSS URL</h2>
+            일부 속성들(ex: background-color)의 속성값은 이미지같은 리소스이며, <b>url(경로)</b>함수를 통해 리소스를 불러들일 수 있습니다.<br><br>
+
+            <font style="color:red">참고: </font>자식요소는 부모요소의 스타일을 함께 상속받습니다.<br><br>
+
         </div>
     </body>
 </html>
