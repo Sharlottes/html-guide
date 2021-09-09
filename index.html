@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Example Document</title>
+        <title>Html Document</title>
+        <meta name="Html Document" description="The korean html document made by sharlotte." content="width=device-width initial-scale=1.0">
         <link href="./styles/style.css" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
     </head>
@@ -9,9 +10,9 @@
     <body>
         <div>
             <h3 id="midpurple">목차</h3><br>
+            <a href="#기본">기본</a><br>
             <a href="#속성">속성</a><br>
             <a href="#문서 메타데이터">문서 메타데이터</a><br>
-            <a href="#기본">기본</a><br>
             <a href="#문장 서식">문장 서식</a><br>
             <a href="#문단 서식">문단 서식</a><br>
             <a href="#목록">목록</a><br>
@@ -24,34 +25,17 @@
         </div>
         <div>
             <a name="기본"><h1>기본 틀</h1></a>
-            <pre>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-
-&lt;/html&gt;
-            </pre>
-            일반적으로 &lt;html&gt; &lt;/html&gt; 태그를 통해 시작하고,<br>
-            &lt;head&gt; &lt;/head&gt; 태그와 &lt;body&gt; &lt;/body&gt; 태그를 통해서 표지와 본문을 입력할 수 있습니다.<br>
+            일반적으로 &lt;html&gt; &lt;/html&gt; 태그를 통해 시작하고 &lt;head&gt; 와 &lt;body&gt; 태그를 통해서 표지와 본문을 입력할 수 있습니다.<br>
             
-            <pre>
+            <pre id="exp1">
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
-    &lt;head&gt;
-        &lt;tiele&gt;페이지 제목입니다.&lt;/tiele&gt;
-    &lt;/head&gt;
     &lt;body&gt;
-        본문본문본문&lt;br&gt;
-        들여쓰인본문들여쓰인본문
+        example frame&lt;br&gt;
     &lt;/body&gt;
 &lt;/html&gt;
             </pre>
-            미리보기
-            <p>
-                <hr>
-                본문본문본문<br>
-                들여쓰인본문들여쓰인본문
-                <hr>
-            </p>
+            <iframe id="exf1" src="./frames/framex1.html"></iframe><br>
 
             <b>&lt;head&gt;</b> 태그는 본문에 보여지지 않는 <span style="color:red">문서 설정들</span>이라고 보면 됩니다.<br>
             <b>&lt;body&gt;</b> 태그는 본문에 그대로 보여지는 <span style="color:red">문서 내용들</span>이라고 보면 됩니다.<br>
@@ -89,30 +73,31 @@
 
         <div>
             <a name="문장 서식"><h1>문장 서식</h1></a>
-            문장 서식은 중첩되는 태그가 많다. 처음엔 필요한 것부터 익혀가는게 좋다.<br><br>
+            <pre id="exp2">
+this is &lt;b&gt;굵은 태그&lt;/b&gt;
+this is also &lt;strong&gt;굵은 태그&lt;/strong&gt;
 
-            this is &lt;b&gt;<b>굵은 태그</b>&lt;/b&gt;<br>
-            this is also &lt;strong&gt;<strong>굵은 태그</strong>&lt;/strong&gt;<br><br>
+this is &lt;i&gt;기울기 태그&lt;/i&gt;
+this is also &lt;em&gt;기울기 태그&lt;/em&gt;
+this is &lt;address&gt;주소용 태그&lt;/address&gt;
 
-            this is &lt;i&gt;<i>기울기 태그</i>&lt;/i&gt;<br>
-            this is also &lt;em&gt;<em>기울기 태그</em>&lt;/em&gt;<br><br>
-            this is &lt;address&gt;<address>주소용 태그</address>&lt;/address&gt;<br><br>
+this is &lt;u&gt;밑줄선 태그&lt;/u&gt;
+this is also &lt;ins&gt;밑줄선 태그&lt;/ins&gt;
 
-            this is &lt;u&gt;<u>밑줄선 태그</u>&lt;/u&gt;<br><br>
-            this is also &lt;ins&gt;<ins>밑줄선 태그</ins>&lt;/ins&gt;<br><br>
+this is &lt;s&gt;취소선 태그&lt;/s&gt;
+this is also &lt;del&gt;취소선 태그&lt;/del&gt;
 
-            this is &lt;s&gt;<s>취소선 태그</s>&lt;/s&gt;<br>
-            this is also &lt;del&gt;<del>취소선 태그</del>&lt;/del&gt;<br><br>
+this is&lt;sup&gt;위첨자 태그&lt;/sup&gt;
 
-            this is<sup>&lt;sup&gt;위첨자 태그&lt;/sup&gt;</sup><br><br>
+this is&lt;sub&gt;아래첨자 태그&lt;/sub&gt;
 
-            this is<sub>&lt;sub&gt;아래첨자 태그&lt;/sub&gt;</sub><br><br>
+this is&lt;mark&gt;강조 태그&lt;/mark&gt;
 
-            this is<mark>&lt;mark&gt;강조 태그&lt;/mark&gt;</mark><br><br>
+this is&lt;q&gt;인용구 태그&lt;/q&gt;
 
-            this is<q>&lt;q&gt;인용구 태그&lt;/q&gt;</q><br><br>
-
-            this is<abbr title="커서를 올려 보세요">&lt;abbr title="커서를 올려 보세요"&gt;줄임말 태그&lt;/abbr&gt;</abbr><br><br>
+this is&lt;abbr title="커서를 올려 보세요"&gt;줄임말 태그&lt;/abbr&gt;
+            </pre>
+            <iframe id="exf2" src="./frames/framex2.html"></iframe><br>
 
             <h2>문자 엔티티</h2>
             &amp;lt; == &lt; <br>
@@ -121,8 +106,6 @@
             &amp;quot; == &quot; <br>
             &amp;apos; == &apos; <br>
             &amp;nbsp; == 공백<br><br>
-            
-            &lt;font color="red"&gt;string&lt;/font&gt; == <font color = "red">string</font>
         </div><br><br><br>
 
         <div>
@@ -132,26 +115,19 @@
                 보통 문장의 내용이 길어지면 화면의 끝에서
                 자동으로 줄바꿈이 일어나지만 nobr 태그로 막을 수 있다.<br>
                 &lt;br&gt;를 통한 강제 줄바꿈은 이루어진다.
-            </nobr><br><br>
-
+            </nobr>
             .
             <p align="left">
-                <b>&lt;p&gt;</b><font size="2"> =<b>P</b>aragraph</font><br>
+                <b>&lt;p&gt;</b><br>
                 이 태그는 줄바꿈 기능이 있고,
-                태그 앞뒤에 자동으로 빈 줄이 생긴다.<br>
-                align 속성을 통해 left, center, right 정렬도 가능하다.
+                태그 앞뒤에 자동으로 빈 줄이 생긴다.
             </p>
-            .<br><br>
-
             .
             <div align="left">
                 <b>&lt;div&gt;</b><br>
                 이 태그도 줄바꿈 기능이 있지만,
-                &lt;p&gt;와 달리 앞뒤에 빈 줄이 없다.<br>
-                align 속성을 통해 left, center, right 정렬도 가능하다.
+                &lt;p&gt;와 달리 앞뒤에 빈 줄이 없다.
             </div>
-            .<br><br>
-
             .
             <blockquote>
                 <b>&lt;blockquote&gt;</b><br>
@@ -159,19 +135,9 @@
                 자동으로 들여쓰기가 된다.<br>
                 블록 인용구로 쓰인다.
             </blockquote>
-            .<br><br>
-
             .
-            <center>
-                <b>&lt;center&gt;</b><br>
-                이 태그도 &lt;div&gt;처럼 줄바꿈 기능이 있으며,
-                강제 중앙정렬이 된다.
-            </center>
-            .<br><br>
-
             <pre>
 <b>&lt;pre&gt;</b><br>
-이 태그는 아래와 같이 줄바꿈, 사이띄기 등을 입력한 형태 그대로 유지한다.
 =========================
     목록1   목록2   목록3
 =========================
@@ -345,13 +311,13 @@
             <b>align</b> 속성을 통해 정렬할 수 있다.<br>
 
             <br><br><br>
-            <iframe src="./frame1.html" style="width:100%; height:300px; border: 3px double mediumslateblue" scrolling="yes" align="center" name="f1"></iframe><br><br>
+            <iframe src="./frames/frame1.html" style="width:100%; height:300px; border: 3px double mediumslateblue" scrolling="yes" align="center" name="f1"></iframe><br><br>
 
             <b>&lt;a&gt;</b> 태그의 <b>target</b>에서 <b>&lt;iframe&gt;</b>의 <b>name</b>속성값을 넣어서 링크를 누르면 프레임이 전환되게 만들 수 있다.<br><br>
 
             <p>
-                <a href="./frame1.html" target="f1">프레임1 열기</a>
-                <a href="./frame2.html" target="f1">프레임2 열기</a>
+                <a href="./frames/frame1.html" target="f1">프레임1 열기</a>
+                <a href="./frames/frame2.html" target="f1">프레임2 열기</a>
             </p>
         </div><br><br>
 
@@ -492,5 +458,6 @@
             <font style="color:red">참고: </font>자식요소는 부모요소의 스타일을 함께 상속받습니다.<br><br>
 
         </div>
+        <script src="./scripts/script.js"></script>
     </body>
 </html>

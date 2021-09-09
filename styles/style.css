@@ -1,3 +1,8 @@
+@font-face {
+    font-family: d2coding;
+    src: url("../fonts/Hack-Regular.ttc") format("truetype");
+}
+
 #midpurple { /*#가 앞에 붙었으니 id=midpurple로 불러들일 수 있습니다.*/
     color: mediumpurple;
 };
@@ -15,5 +20,19 @@ th, td { /*,로 복수의 선택자를 지정할 수 있습니다.*/
 html {
     font-size: 20px; /* px 은 'pixels' 를 의미합니다: 기본 글자 크기는 현재 10 pixels 높이입니다. */
     font-family: 'Jua', sans-serif;
+}
+
+pre {
+    background-color: gainsboro;
+    border: 3px double black;
+    font-family: d2coding;
+    width: min-content;
+    height: min-content;
+}
+
+iframe {
+    width: min-content;
+    height: fit-content;
+    border: 3px double mediumslateblue" scrolling="yes" align="center;
 }
 
