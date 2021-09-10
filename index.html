@@ -15,6 +15,7 @@
             <a href="#문서 메타데이터">문서 메타데이터</a><br>
             <a href="#문장 서식">문장 서식</a><br>
             <a href="#문단 서식">문단 서식</a><br>
+            <a href="#수평선">수평선</a><br>
             <a href="#목록">목록</a><br>
             <a href="#이미지">이미지</a><br>
             <a href="#링크">링크</a><br>
@@ -27,22 +28,28 @@
             <a name="기본"><h1>기본 틀</h1></a>
             일반적으로 &lt;html&gt; &lt;/html&gt; 태그를 통해 시작하고 &lt;head&gt; 와 &lt;body&gt; 태그를 통해서 표지와 본문을 입력할 수 있습니다.<br>
             
-            <pre id="exp1">
+            <div class="row">
+                <div class="left">
+                    <pre class="code">
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;body&gt;
         example frame&lt;br&gt;
     &lt;/body&gt;
 &lt;/html&gt;
-            </pre>
-            <iframe id="exf1" src="./frames/framex1.html"></iframe><br>
+                    </pre>
+                </div>
+                <div class="right">
+                    exampleframe
+                </div>
+            </div>
 
             <b>&lt;head&gt;</b> 태그는 본문에 보여지지 않는 <span style="color:red">문서 설정들</span>이라고 보면 됩니다.<br>
             <b>&lt;body&gt;</b> 태그는 본문에 그대로 보여지는 <span style="color:red">문서 내용들</span>이라고 보면 됩니다.<br>
             편집 중인 html 파일을 저장한 후, 파일을 실행하거나 터미널에서 파일 이름을 치면 웹사이트가 자동으로 열려집니다.<br>
             
             이 문서의 소스코드는 <a href="https://github.com/Sharlottes/html-guide/blob/main/index.html">여기</a>에 있습니다.
-        </div><br><br>
+        </div><br>
 
         <div>
             <a name="속성"><h1>속성</h1></a>
@@ -53,7 +60,7 @@
                     <li><b>"para"</b>: 속성값입니다. 큰따음표는 필수가 아니지만, 속성의 구분은 띄워쓰기로 구분되므로 큰따음표로 속성값에 의해 띄워쓰여지는 문제를 막을 수 있습니다.</li>
                     <li><b>inside</b>: 내용입니다. </li>
                 </ul>
-        </div><br><br>
+        </div><br>
 
         <div>
             <a name="문서 메타데이터"><h1>문서 메타데이터</h1></a>
@@ -67,13 +74,15 @@
                         <li><b>name</b>와 <b>description</b> 속성으로 이름과 설명을 넣어서 검색 엔진에 더 잘 노출되게 할 수 있습니다.</li>
                         <li><b>lang</b> 속성으로 페이지의 언어를 설정할 수 있는데, 이는 &lt;span&gt; 태그에도 쓰여 <b>각 언어에 따른 문자</b>를 설정할 수 있습니다.</li>
                         <li>그 외에도 여러 SNS(ex: facebook, twitch)에서 독점 속성을 가지고 있습니다.</li>
-                    </ul><br>
+                    </ul>
             </blockquote>
-        </div><br><br>
+        </div><br>
 
         <div>
             <a name="문장 서식"><h1>문장 서식</h1></a>
-            <pre id="exp2">
+            <div style="width:'75%';" class="row">
+                <div class="left">
+                    <pre class="code">
 this is &lt;b&gt;굵은 태그&lt;/b&gt;
 this is also &lt;strong&gt;굵은 태그&lt;/strong&gt;
 
@@ -96,8 +105,33 @@ this is&lt;mark&gt;강조 태그&lt;/mark&gt;
 this is&lt;q&gt;인용구 태그&lt;/q&gt;
 
 this is&lt;abbr title="커서를 올려 보세요"&gt;줄임말 태그&lt;/abbr&gt;
-            </pre>
-            <iframe id="exf2" src="./frames/framex2.html"></iframe><br>
+                        </pre>
+                </div>
+                <div class="right">
+                    this is <b>굵은 태그</b><br>
+                    this is also <strong>굵은 태그</strong><br><br>
+            
+                    this is <i>기울기 태그</i><br>
+                    this is also <em>기울기 태그</em><br>
+                    this is <address>주소용 태그</address><br><br>
+            
+                    this is <u>밑줄선 태그</u><br>
+                    this is also <ins>밑줄선 태그</ins><br><br>
+            
+                    this is <s>취소선 태그</s><br>
+                    this is also <del>취소선 태그</del><br><br>
+            
+                    this is<sup>위첨자 태그</sup><br><br>
+            
+                    this is<sub>아래첨자 태그</sub><br><br>
+            
+                    this is<mark>강조 태그</mark><br><br>
+            
+                    this is<q>인용구 태그</q><br><br>
+            
+                    this is<abbr title="커서를 올려 보세요">줄임말 태그</abbr>
+                </div>
+            </div>
 
             <h2>문자 엔티티</h2>
             &amp;lt; == &lt; <br>
@@ -106,7 +140,7 @@ this is&lt;abbr title="커서를 올려 보세요"&gt;줄임말 태그&lt;/abbr&
             &amp;quot; == &quot; <br>
             &amp;apos; == &apos; <br>
             &amp;nbsp; == 공백<br><br>
-        </div><br><br><br>
+        </div><br>
 
         <div>
             <a name="문단 서식"><h1>문단 서식</h1></a>
@@ -137,7 +171,9 @@ this is&lt;abbr title="커서를 올려 보세요"&gt;줄임말 태그&lt;/abbr&
             </blockquote>
             .
             <pre>
-<b>&lt;pre&gt;</b><br>
+<b>&lt;pre&gt;</b>
+이 태그는 문자 그대로 출력할 수 있지만, &lt;나 &gt;는 &amp;lt;와 &amp;gt;로 바꿔써야 한다.
+
 =========================
     목록1   목록2   목록3
 =========================
@@ -146,7 +182,7 @@ this is&lt;abbr title="커서를 올려 보세요"&gt;줄임말 태그&lt;/abbr&
     다       C       3
     라       D       4
 =========================
-            </pre><br><br>
+            </pre><br>
 
             <b>&lt;span&gt;</b><br>
             이 태그는 다른 문장과 어울리면서 영역을 구성하는데 주로 쓰인다.<br>
@@ -158,25 +194,27 @@ this is&lt;abbr title="커서를 올려 보세요"&gt;줄임말 태그&lt;/abbr&
             하나만 인식한다.<p>
             때문에 별로 추천하지 않는다.
             </p></p></p></p></p></p>
-        <div><br><br>
+        <div><br>
 
         <div>
-            <h1>수평선</h1>
-            <b>&lt;hr&gt;</b><br>
-            일반 줄 <hr>
-            <b>size</b> 속성을 통해 크기 조절이 가능하다.<br>
-            10px 줄 <hr size="10px"><br><br>
+            <a name="수평선"><h1>수평선</h1></a>
+            &lt;hr&gt; 태그를 사용하며, 닫는 태그는 없습니다. 모든 스타일은 CSS를 통해 작성합니다.<br><br>
 
-            <b>width</b> 속성을 통해 너비 조절이 가능하다.(px, %단위)<br>
-            10px 100px줄 <hr size="10px", width="100px">
-            10px 절반줄 <hr size="10px", width="50%"><br><Br>
-            
-            <b>color</b> 속성을 통해 색 조절이 가능하다.<br>
-            10px 검은색 절절반줄 <hr size="10px", width="25%", color="black"><br><br>
+                &lt;hr style="width: 250px; color:red; border: double yellow;" align="left"&gt;<br>
+                <hr style="width: 250px; color:red; border: double yellow;" align="left"><br><br>
+                
+                &lt;hr style="width: 250px; height: 250px; color:mediumpurple; border: outset purple;" align="left"&gt;<br>
+                <hr style="width: 250px; height: 250px; color:mediumpurple; border: outset purple;" align="left"><br><br>
 
-            <b>align</b> 속성을 통해 상하좌우 정렬이 가능하다.<br>
-            25px 왼쪽 주황색 절반줄 <hr size="25px", width="50%", color="orange", align="left">
-        </div><br><br>
+                &lt;hr style="height: 250px; color: orange; border: 2px inset olivedrab;" align="left"&gt;<br>
+                <hr style="height: 250px; color: orange; border: 2px inset olivedrab;" align="left"><br><br>
+
+                &lt;hr style="size: 50px; width: 100px; border:5px double mediumspringgreen;" align="left"&gt;<br>
+                <hr style="size: 50px; width: 100px; border:5px double mediumspringgreen;" align="left"><br><br>
+
+                &lt;hr style="size: 25px; width: 50px; height: 50px; border: 2.5px groove mediumvioletred; align="left"&gt;<br>
+                <hr style="size: 25px; width: 50px; height: 50px; border: 2.5px groove mediumvioletred;" align="left"><br><br>
+        </div><br>
 
         <div>
             <a name="목록"><h1>목록</h1></a>
@@ -422,6 +460,8 @@ this is&lt;abbr title="커서를 올려 보세요"&gt;줄임말 태그&lt;/abbr&
                     <td>a:hover<br>&lt;a&gt; 를 선택하지만, 마우스 포인터가 링크위에 있을 때만 선택함</td>
                 </tr>
             </table>
+
+            <b>참고 - class,와 id의 차이점:</b> id는 둘 이상의 요소에 같은 값을 넣을 수 없지만, class는 중첩이 가능하다.<br><br>
 
             <h2>CSS 색상값</h2>
             일부 속성들(ex: color, background-color)의 속성값은 색상값이며, 별도의 키워드를 지원합니다.<br>

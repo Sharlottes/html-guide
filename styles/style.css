@@ -22,12 +22,30 @@ html {
     font-family: 'Jua', sans-serif;
 }
 
-pre {
+pre.code {
+    font-family: d2coding;
+}
+
+div.row {
+    width: 60%;
+    display: flex;
+    border: 1px solid #003458;
+}
+
+div.left {    
     background-color: gainsboro;
     border: 3px double black;
-    font-family: d2coding;
-    width: min-content;
-    height: min-content;
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+}
+
+div.right {
+    background-color: #ece6cc;
+    border: 3px double black;
+    width: 50%;
+    float: right;
+    box-sizing: border-box;
 }
 
 iframe {
