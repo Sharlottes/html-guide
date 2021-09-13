@@ -307,12 +307,16 @@ this is&lt;abbr title="커서를 올려 보세요"&gt;줄임말 태그&lt;/abbr&
             <a name="링크"><h1>링크</h1></a>
             <b>&lt;a&gt;</b> 태그를 통해서 링크를 설정할 수 있다.<br><br>
 
-            <b>같은 문서 내 이동</b><br>
-            &lt;a name="이름"&gt; 으로 이동할 위치를 지정한 다음, &lt;a href="#이름"&gt; 으로 링크를 설정한다.<br><br>
-            
-            <b>다른 문서로 이동</b><br>
-            &lt;a href="URL, 경로"&gt; 로 링크를 설정한다.<br><br>
-
+            <b>href</b>: 이동할 링크를 URL이나 문서 이름으로 설정합니다.<br>
+            <b>name</b>: href 속성에서 문서 이름으로 링크할 경우에, 링크된 문서에 이름을 지정해야 합니다.<br>
+            <b>target</b>: 링크를 클릭했을 때 문서가 열릴 위치를 설정합니다.<br>
+            <blockquote>
+            <a href="https://naver.com" target="_blank">target="_blank"</a>: 링크된 문서를 새로운 탭에서 엽니다.<br>
+            <a href="https://naver.com" target="_self">target="_self"</a>: 링크된 문서를 링크가 위치한 현재 프레임에서 엽니다. 기본값입니다.<br>
+            <a href="https://naver.com" target="_parent">target="_parent":</a> 링크된 문서를 현재 부모 프레임에서 엽니다.<br>
+            <a href="https://naver.com" target="_top">target="_top"</a>: 링크된 문서를 현재 윈도우 전체에서 엽니다.<br>
+            target="프레임이름": 링크된 문서를 프레임의 name 속성값과 일치한 프레임에서 오픈합니다.
+            </blockquote>
             <b>링크 상태</b>
             CSS에서 a.&lt;링크 상태&gt; 태그 식별자로 사용할 수 있다.<br><br>
 
