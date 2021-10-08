@@ -2,12 +2,137 @@
 <html>
     <head>
         <title>테스트 페이지</title>
+        <link href="./styles/style2.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-        <span id="test1" style="border: 1px solid #444444;text-align: center;">Click Me</span><br><br>
+        <a href="index.html" style="border: 1px solid #444444;">돌아가기</a><br><br>
+
+        <span id="test1" style="border: 1px solid #444444;">Click Me</span><br><br>
         
-        <span style="font-size: 25px;"><b>Width</b></span><br>
-        <span id="asdf" style="padding-left:15px"><b>NaN</b></span><br><br>
+        <span style="font-size: 25px;"><b>Size</b></span><br>
+        <span id="asdf" style="padding-left:15px"><b>NaN x NaN</b></span><br><br>
+
+        <div>
+            <h2>폼</h2>
+            폼은 사용자로부터 데이터를 받아 서버에 전송하는 태그입니다.<br><br>
+
+            <table>
+                <tr bgcolor="gray" align="left">
+                    <th>태그 이름</th>
+                    <th>예시</th>
+                    <th>설명</th>
+                </tr>
+                <tr>
+                    <td>button</td>
+                    <td><input type="button"></td>
+                    <td>기본 버튼 필드</td>
+                </tr>
+                <tr>
+                    <td>checkbox</td>
+                    <td><input type="checkbox"></td>
+                    <td>체크박스 버튼 필드</td>
+                </tr>
+                <tr>
+                    <td>radio</td>
+                    <td><input type="radio"></td>
+                    <td>라디오 버튼 필드</td>
+                </tr>
+                <tr>
+                    <td>month</td>
+                    <td><input type="month"></td>
+                    <td>년/월 선택 필드</td>
+                </tr>
+                <tr>
+                    <td>date</td>
+                    <td><input type="date"></td>
+                    <td>년/월/일 선택 필드</td>
+                </tr>
+                <tr>
+                    <td>week</td>
+                    <td><input type="week"></td>
+                    <td>년/주 선택 필드</td>
+                </tr>
+                <tr>
+                    <td>time</td>
+                    <td><input type="time"></td>
+                    <td>시/분 선택 필드</td>
+                </tr>
+                <tr>
+                    <td>datetime-local</td>
+                    <td><input type="datetime-local"></td>
+                    <td>년/월/일/시/분 선택 필드</td>
+                </tr>
+                <tr>
+                    <td>color</td>
+                    <td><input type="color"></td>
+                    <td>색상 선택 필드</td>
+                </tr>
+                <tr>
+                    <td>file</td>
+                    <td><input type="file"></td>
+                    <td>파일 제출 필드<br>*multiple: 다수의 파일 제출 가능</td>
+                </tr>
+                <tr>
+                    <td>range</td>
+                    <td><input type="range"></td>
+                    <td>숫자 슬라이드 바 필드<br>*max: 최댓값, *min: 최솟값, *value: 초깃값<br>*step: 숫자간 간격</td>
+                </tr>
+                <tr>
+                    <td>reset</td>
+                    <td><input type="reset"></td>
+                    <td>초기화 버튼 필드</td>
+                </tr>
+                <tr>
+                    <td>submit</td>
+                    <td><input type="submit"></td>
+                    <td>제출 버튼 필드</td>
+                </tr>
+                <tr>
+                    <td>text</td>
+                    <td><input type="text"></td>
+                    <td>텍스트 입력 필드</td>
+                </tr>
+                <tr>
+                    <td>number</td>
+                    <td><input type="number"></td>
+                    <td>숫자 입력 필드<br>*max: 최댓값, *min: 최솟값, *value: 초깃값<br>*step: 숫자간 간격</td>
+                </tr>
+                <tr>
+                    <td>email</td>
+                    <td><input type="email"></td>
+                    <td>이메일 입력 필드<br>*multiple: 다수의 이메일 입력 가능</td>
+                </tr>
+                <tr>
+                    <td>password</td>
+                    <td><input type="password"></td>
+                    <td>비밀번호 입력 필드</td>
+                </tr>
+                <tr>
+                    <td>tel</td>
+                    <td><input type="tel"></td>
+                    <td>전화번호 입력 필드</td>
+                </tr>
+                <tr>
+                    <td>search</td>
+                    <td><input type="search"></td>
+                    <td>검색어 입력 필드</td>
+                </tr>
+                <tr>
+                    <td>url</td>
+                    <td><input type="url"></td>
+                    <td>URL 입력 필드</td>
+                </tr>
+                <tr>
+                    <td>hidden</td>
+                    <td><input type="hidden"></td>
+                    <td>숨겨진 입력 필드</td>
+                </tr>
+            </table>
+        </div>
+
+
+
+
 
         <script type="text/javascript">
             var test = document.getElementById('test1');
@@ -48,13 +173,13 @@
 
             function changeColor() {
                 var prog = window.innerWidth/screen.width;
-                var str = lerp(valueOfColor({r:0,g:0,b:0,a:255}, "ffffff"), valueOfColor({r:0,g:0,b:0,a:255}, "000000"), prog);
+                var str = lerp(valueOfColor({r:0,g:0,b:0,a:255}, "000000"), valueOfColor({r:0,g:0,b:0,a:255}, "ffffff"), prog);
                 document.body.style.backgroundColor = colorToString(str);
-                x.innerHTML = `<b>${window.innerWidth}/${screen.width}</b>` 
+                x.innerHTML = `<b>${window.innerWidth}/${screen.width} x ${window.innerHeight}/${screen.height}</b>`
             }
 
-            test.addEventListener('mouseover', () => test.innerHTML = `No, Don't click me!`);
             test.addEventListener('mouseleave', () => test.innerHTML = `Click me!`);
+            test.addEventListener('mouseover', () => test.innerHTML = `No, Don't click me!`);
             test.addEventListener('click', () => alert('I SAID DO NOT CLICK ME'));
             window.addEventListener("load", changeColor);
             window.addEventListener("resize", changeColor);
