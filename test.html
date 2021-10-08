@@ -22,6 +22,7 @@
                     <th>값 이름</th>
                     <th>예시</th>
                     <th>설명</th>
+                    <th>관련 속성</th>
                 </tr>
                 <tr>
                     <td>button</td>
@@ -31,28 +32,27 @@
                 <tr>
                     <td>checkbox</td>
                     <td><input type="checkbox"></td>
-                    <td>체크박스 버튼 필드<br>
-                        *checked: 페이지가 로드될 때 체크</td>
+                    <td>체크박스 버튼 필드</td>
+                    <td>*checked: 페이지가 로드될 때 체크</td>
                 </tr>
                 <tr>
                     <td>radio</td>
                     <td><input type="radio"></td>
-                    <td>라디오 버튼 필드<br>
-                        *checked: 페이지가 로드될 때 체크</td>
+                    <td>라디오 버튼 필드</td>
+                    <td>*checked: 페이지가 로드될 때 체크</td>
                 </tr>
                 <tr>
                     <td>month</td>
                     <td><input type="month"></td>
-                    <td>년/월 선택 필드<br>
-                        *autocomplete: 자동 완성 기능<br>
+                    <td>년/월 선택 필드</td>
+                    <td>*autocomplete: 자동 완성 기능<br>
                         *max, min: 입력 허용 범위</td>
                 </tr>
                 <tr>
                     <td>date</td>
                     <td><input type="date"></td>
-                    <td>년/월/일 선택 필드<br>
-                        *autocomplete: 자동 완성 기능<br>
-                        *max, min: 입력 허용 범위기능<br>
+                    <td>년/월/일 선택 필드</td>
+                    <td>*autocomplete: 자동 완성 기능<br>
                         *max, min: 입력 허용 범위<br>
                         *pattern: 입력값을 검사할 정규 표현식<br>
                         *title: 정규 표현식에 대한 간단한 설명(힌트)</td>
@@ -61,42 +61,42 @@
                 <tr>
                     <td>week</td>
                     <td><input type="week"></td>
-                    <td>년/주 선택 필드<br>
-                        *autocomplete: 자동 완성 기능<br>
+                    <td>년/주 선택 필드</td>
+                    <td>*autocomplete: 자동 완성 기능<br>
                         *max, min: 입력 허용 범위</td>
                 </tr>
                 <tr>
                     <td>time</td>
                     <td><input type="time"></td>
-                    <td>시/분 선택 필드<br>
-                        *autocomplete: 자동 완성 기능<br>
+                    <td>시/분 선택 필드</td>
+                    <td>*autocomplete: 자동 완성 기능<br>
                         *max, min: 입력 허용 범위</td>
                 </tr>
                 <tr>
                     <td>datetime-local</td>
                     <td><input type="datetime-local"></td>
-                    <td>년/월/일/시/분 선택 필드<br>
-                        *autocomplete: 자동 완성 기능<br>
+                    <td>년/월/일/시/분 선택 필드</td>
+                    <td>*autocomplete: 자동 완성 기능<br>
                         *max, min: 입력 허용 범위</td>
                 </tr>
                 <tr>
                     <td>color</td>
                     <td><input type="color"></td>
-                    <td>색상 선택 필드<br>
-                        *autocomplete: 자동 완성 기능</td>
+                    <td>색상 선택 필드</td>
+                    <td>*autocomplete: 자동 완성 기능</td>
                 </tr>
                 <tr>
                     <td>file</td>
                     <td><input type="file"></td>
-                    <td>파일 제출 필드<br>
-                        *multiple: 다수의 파일 제출 가능<br>
-                        *accept: 파일 확장자</td>
+                    <td>파일 제출 필드</td>
+                    <td>*multiple: 다수의 파일 제출 가능<br>
+                        *<a href=#accept-table>accept</a>: 파일 확장자</td>
                 </tr>
                 <tr>
                     <td>range</td>
                     <td><input type="range"></td>
-                    <td>숫자 슬라이드 바 필드<br>
-                        *max: 최댓값, *min: 최솟값, *value: 초깃값<br>
+                    <td>숫자 슬라이드 바 필드</td>
+                    <td>*max: 최댓값, *min: 최솟값, *value: 초깃값<br>
                         *step: 숫자간 간격, *autocomplete: 자동 완성 기능</td>
                 </tr>
                 <tr>
@@ -107,19 +107,20 @@
                 <tr>
                     <td>image</td>
                     <td><input type="image"></td>
-                    <td>이미지가 있는 제출 버튼 필드<br>
-                        *formaction: 폼 데이터를 전송할 URL, &lt;form&gt;의 action 속성값 재정의<br>
+                    <td>이미지가 있는 제출 버튼 필드</td>
+                    <td>*formaction: 폼 데이터를 전송할 URL, &lt;form&gt;의 action 속성값 재정의<br>
                         *formenctype: 폼 데이터를 전송할 때 쓰일 인코딩, &lt;form&gt;의 method=post일때 가능, enctyle 속성값 재정의<br>
                         *formmethod: 폼 데이터를 전송할 방법, &lt;form&gt;의 method 속성값 재정의<br>
                         *formtarget: 폼 데이터를 전송한 후 받을 응답 데이터를 표시할 위치, form의 target 속성값 재정의<br>
                         *alt: 이미지 대체 텍스트<br>
-                        *height: 픽셀 단위 높이</td>
+                        *height: 픽셀 단위 높이<br>
+                        *src: 제출 버튼 이미지 URL</td>
                 </tr>
                 <tr>
                     <td>submit</td>
                     <td><input type="submit"></td>
-                    <td>제출 버튼 필드<br>
-                        *formaction: 폼 데이터를 전송할 URL, &lt;form&gt;의 action 속성값 재정의<br>
+                    <td>제출 버튼 필드</td>
+                    <td>*formaction: 폼 데이터를 전송할 URL, &lt;form&gt;의 action 속성값 재정의<br>
                         *formenctype: 폼 데이터를 전송할 때 쓰일 인코딩, &lt;form&gt;의 method=post일때 가능, enctyle 속성값 재정의<br>
                         *formmethod: 폼 데이터를 전송할 방법, &lt;form&gt;의 method 속성값 재정의<br>
                         *formtarget: 폼 데이터를 전송한 후 받을 응답 데이터를 표시할 위치, form의 target 속성값 재정의<br>
@@ -128,82 +129,82 @@
                 <tr>
                     <td>text</td>
                     <td><input type="text"></td>
-                    <td>텍스트 입력 필드<br>
-                        *autocomplete: 자동 완성 기능<br>
+                    <td>텍스트 입력 필드</td>
+                    <td>*autocomplete: 자동 완성 기능<br>
                         *maxlength: 최대 입력 문자수기능<br>
                         *size: 문자수 단위 너비<br>
                         *max, min: 입력 허용 범위<br>
                         *pattern: 입력값을 검사할 정규 표현식<br>
-                        *title: 정규 표현식에 대한 간단한 설명(힌트)</td>
                         *placeholder: 입력 도움말, 입력을 시작하면 사라짐<br>
+                        *title: 정규 표현식에 대한 간단한 설명(힌트)</td>
                 </tr>
                 <tr>
                     <td>number</td>
                     <td><input type="number"></td>
-                    <td>숫자 입력 필드<br>
-                        *max: 최댓값, *min: 최솟값, *value: 초깃값<br>
+                    <td>숫자 입력 필드</td>
+                    <td>*max: 최댓값, *min: 최솟값, *value: 초깃값<br>
                         *step: 숫자간 간격<br>
                         *maxlength: 최대 입력 문자수</td>
                 </tr>
                 <tr>
                     <td>email</td>
                     <td><input type="email"></td>
-                    <td>이메일 입력 필드<br>
-                        *multiple: 다수의 이메일 입력 가능<br>
+                    <td>이메일 입력 필드</td>
+                    <td>*multiple: 다수의 이메일 입력 가능<br>
                         *autocomplete: 자동 완성 기능<br>
                         *maxlength: 최대 입력 문자수기능<br>
                         *size: 문자수 단위 너비<br>
                         *max, min: 입력 허용 범위<br>
                         *pattern: 입력값을 검사할 정규 표현식<br>
-                        *title: 정규 표현식에 대한 간단한 설명(힌트)</td>
                         *placeholder: 입력 도움말, 입력을 시작하면 사라짐<br>
+                        *title: 정규 표현식에 대한 간단한 설명(힌트)</td>
                 </tr>
                 <tr>
                     <td>password</td>
                     <td><input type="password"></td>
-                    <td>비밀번호 입력 필드<br>
-                        *autocomplete: 자동 완성 기능<br>
+                    <td>비밀번호 입력 필드</td>
+                    <td>*autocomplete: 자동 완성 기능<br>
                         *maxlength: 최대 입력 문자수기능<br>
                         *size: 문자수 단위 너비<br>
                         *max, min: 입력 허용 범위<br>
                         *pattern: 입력값을 검사할 정규 표현식<br>
-                        *title: 정규 표현식에 대한 간단한 설명(힌트)</td>
                         *placeholder: 입력 도움말, 입력을 시작하면 사라짐<br>
+                        *title: 정규 표현식에 대한 간단한 설명(힌트)</td>
                 </tr>
                 <tr>
                     <td>tel</td>
                     <td><input type="tel"></td>
-                    <td>전화번호 입력 필드<br>
-                        *autocomplete: 자동 완성 기능<br>
+                    <td>전화번호 입력 필드</td>
+                    <td>*autocomplete: 자동 완성 기능<br>
                         *maxlength: 최대 입력 문자수기능<br>
                         *size: 문자수 단위 너비<br>
                         *max, min: 입력 허용 범위<br>
                         *pattern: 입력값을 검사할 정규 표현식<br>
-                        *title: 정규 표현식에 대한 간단한 설명(힌트)</td>
                         *placeholder: 입력 도움말, 입력을 시작하면 사라짐<br>
+                        *title: 정규 표현식에 대한 간단한 설명(힌트)</td>
                 </tr>
                 <tr>
                     <td>search</td>
                     <td><input type="search"></td>
-                    <td>검색어 입력 필드<br>
-                        *autocomplete: 자동 완성 기능<br>
+                    <td>검색어 입력 필드</td>
+                    <td>*autocomplete: 자동 완성 기능<br>
                         *maxlength: 최대 입력 문자수기능<br>
                         *size: 문자수 단위 너비<br>
                         *max, min: 입력 허용 범위<br>
                         *pattern: 입력값을 검사할 정규 표현식<br>
-                        *title: 정규 표현식에 대한 간단한 설명(힌트)</td>
                         *placeholder: 입력 도움말, 입력을 시작하면 사라짐<br>
+                        *title: 정규 표현식에 대한 간단한 설명(힌트)</td>
                 </tr>
                 <tr>
                     <td>url</td>
                     <td><input type="url"></td>
-                    <td>URL 입력 필드<br>
-                        *maxlength: 최대 입력 문자수기능<br>
+                    <td>URL 입력 필드</td>
+                    <td>*maxlength: 최대 입력 문자수기능<br>
                         *size: 문자수 단위 너비<br>
                         *max, min: 입력 허용 범위<br>
                         *pattern: 입력값을 검사할 정규 표현식<br>
-                        *title: 정규 표현식에 대한 간단한 설명(힌트)</td>
                         *placeholder: 입력 도움말, 입력을 시작하면 사라짐<br>
+                        *title: 정규 표현식에 대한 간단한 설명(힌트)</td>
                 </tr>
                 <tr>
                     <td>hidden</td>
@@ -220,8 +221,6 @@
             *form: &lt;form&gt; 태그의 id<br>
             *list: &lt;datalist&gt; 태그의 id<br>
             *name, id: 다른 태그의 속성값, 자바스크립트, 또는 서버에서 요소를 참조하기 위한 이름과 아이디<br>
-
-
         </div>
 
 
