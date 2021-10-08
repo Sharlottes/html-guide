@@ -4,19 +4,19 @@
         <title>테스트 페이지</title>
     </head>
     <body>
-        <span id="test1" style="border: 1px solid #444444;text-align: center;">Click Me</span>
+        <span id="test1" style="border: 1px solid #444444;text-align: center;">Click Me</span><br><br>
+        
+        <span style="font-size: 25px;"><b>Width</b></span><br>
+        <span id="asdf" style="padding-left:15px"><b>NaN</b></span><br><br>
+
         <script type="text/javascript">
             var test = document.getElementById('test1');
-            test.addEventListener('click', function(){
-                alert('Hello world');
-            });
+            var x = document.getElementById('asdf');
 
             function valueOfColor(out={r:0,g:0,b:0,a:255}, string="") {
-                var offset=2;
-                out.r = parseInt("0x"+string.substring(0, offset), 16);
-                out.g = parseInt("0x"+string.substring(offset, 2*offset), 16);
-                out.b = parseInt("0x"+string.substring(2*offset, 3*offset), 16);
-                if(string.length==8) out.a = parseInt("0x"+string.substring(3*offset, 4*offset), 16);
+                var arr = ['r', 'g', 'b', 'a'];
+                for(var i=0; i<(string.length==8 ? 4 : 3); i++) 
+                    out[arr[i]] = parseInt("0x"+string.substring(2*i, 2*(i+1)), 16);
                 return out;
             }
  
@@ -25,27 +25,24 @@
             }
 
             function clampColor(out={r:0,g:0,b:0,a:255}) {
-                out.r = parseInt(clampNumber(out.r));
-                out.g = parseInt(clampNumber(out.g));
-                out.b = parseInt(clampNumber(out.b));
-                out.a = parseInt(clampNumber(out.a));
+                var arr = ['r', 'g', 'b', 'a'];
+                for(var i=0; i<4; i++) 
+                    out[arr[i]] = parseInt(clampNumber(out[arr[i]]));
                 return out;
             }
 
             function lerp(out={r:0,g:0,b:0,a:255}, color={r:0,g:0,b:0,a:255}, t=0) {
-                out.r += t * (color.r - out.r);
-                out.g += t * (color.g - out.g);
-                out.b += t * (color.b - out.b);
-                out.a += t * (color.a - out.a);
+                var arr = ['r', 'g', 'b', 'a'];
+                for(var i=0; i<4; i++) 
+                    out[arr[i]] += t * (color[arr[i]] - out[arr[i]]);
                 return clampColor(out); 
             }
             
             function colorToString(out={r:0,g:0,b:0,a:255}) {
                 var str = "#";
-                str += out.r.toString(16) < 10 ? "0" + out.r.toString(16) : out.r.toString(16);
-                str += out.g.toString(16) < 10 ? "0" + out.g.toString(16) : out.g.toString(16);
-                str += out.b.toString(16) < 10 ? "0" + out.b.toString(16) : out.b.toString(16);
-                str += out.a.toString(16) < 10 ? "0" + out.a.toString(16) : out.a.toString(16);
+                var arr = ['r', 'g', 'b', 'a'];
+                for(var i=0; i<4; i++) 
+                    str += out[arr[i]].toString(16) < 10 ? "0" + out[arr[i]].toString(16) : out[arr[i]].toString(16);
                 return str;
             }
 
@@ -53,8 +50,13 @@
                 var prog = window.innerWidth/screen.width;
                 var str = lerp(valueOfColor({r:0,g:0,b:0,a:255}, "ffffff"), valueOfColor({r:0,g:0,b:0,a:255}, "000000"), prog);
                 document.body.style.backgroundColor = colorToString(str);
+                x.innerHTML = `<b>${window.innerWidth}/${screen.width}</b>` 
             }
 
+            test.addEventListener('mouseover', () => test.innerHTML = `No, Don't click me!`);
+            test.addEventListener('mouseleave', () => test.innerHTML = `Click me!`);
+            test.addEventListener('click', () => alert('I SAID DO NOT CLICK ME'));
+            window.addEventListener("load", changeColor);
             window.addEventListener("resize", changeColor);
         </script>
     </body>
