@@ -32,7 +32,8 @@ th {
   font-weight: bold;
   padding: 10px 15px;
   position: relative;
-  text-shadow: 0 1px 0 #000;  
+  text-shadow: 0 1px 0 #000;
+  overflow:visible;
 }
 
 th:after {

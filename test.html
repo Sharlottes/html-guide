@@ -16,9 +16,26 @@
             <h2>폼</h2>
             폼은 사용자로부터 데이터를 받아 서버에 전송하는 태그입니다.<br><br>
 
+        
+            
+            
             <table>
+                <caption>속성 목록</caption>
                 <tr bgcolor="gray" align="left">
-                    <th>태그 이름</th>
+                    <th>속성 이름</th>
+                    <th>예시</th>
+                    <th>설명</th>
+                </tr>
+                <tr>
+                    <td>accept</td>
+
+                </tr>
+            </table>
+            
+            <table>
+                <caption>type 속성 목록</caption>
+                <tr bgcolor="gray" align="left">
+                    <th>값 이름</th>
                     <th>예시</th>
                     <th>설명</th>
                 </tr>
@@ -30,57 +47,62 @@
                 <tr>
                     <td>checkbox</td>
                     <td><input type="checkbox"></td>
-                    <td>체크박스 버튼 필드</td>
+                    <td>체크박스 버튼 필드<br>*checked: 페이지가 로드될 때 체크</td>
                 </tr>
                 <tr>
                     <td>radio</td>
                     <td><input type="radio"></td>
-                    <td>라디오 버튼 필드</td>
+                    <td>라디오 버튼 필드<br>*checked: 페이지가 로드될 때 체크</td>
                 </tr>
                 <tr>
                     <td>month</td>
                     <td><input type="month"></td>
-                    <td>년/월 선택 필드</td>
+                    <td>년/월 선택 필드<br>*autocomplete: 자동 완성 기능</td>
                 </tr>
                 <tr>
                     <td>date</td>
                     <td><input type="date"></td>
-                    <td>년/월/일 선택 필드</td>
+                    <td>년/월/일 선택 필드<br>*autocomplete: 자동 완성 기능</td>
                 </tr>
                 <tr>
                     <td>week</td>
                     <td><input type="week"></td>
-                    <td>년/주 선택 필드</td>
+                    <td>년/주 선택 필드<br>*autocomplete: 자동 완성 기능</td>
                 </tr>
                 <tr>
                     <td>time</td>
                     <td><input type="time"></td>
-                    <td>시/분 선택 필드</td>
+                    <td>시/분 선택 필드<br>*autocomplete: 자동 완성 기능</td>
                 </tr>
                 <tr>
                     <td>datetime-local</td>
                     <td><input type="datetime-local"></td>
-                    <td>년/월/일/시/분 선택 필드</td>
+                    <td>년/월/일/시/분 선택 필드<br>*autocomplete: 자동 완성 기능</td>
                 </tr>
                 <tr>
                     <td>color</td>
                     <td><input type="color"></td>
-                    <td>색상 선택 필드</td>
+                    <td>색상 선택 필드<br>*autocomplete: 자동 완성 기능</td>
                 </tr>
                 <tr>
                     <td>file</td>
                     <td><input type="file"></td>
-                    <td>파일 제출 필드<br>*multiple: 다수의 파일 제출 가능</td>
+                    <td>파일 제출 필드<br>*multiple: 다수의 파일 제출 가능<br>*accept: 파일 확장자</td>
                 </tr>
                 <tr>
                     <td>range</td>
                     <td><input type="range"></td>
-                    <td>숫자 슬라이드 바 필드<br>*max: 최댓값, *min: 최솟값, *value: 초깃값<br>*step: 숫자간 간격</td>
+                    <td>숫자 슬라이드 바 필드<br>*max: 최댓값, *min: 최솟값, *value: 초깃값<br>*step: 숫자간 간격, *autocomplete: 자동 완성 기능</td>
                 </tr>
                 <tr>
                     <td>reset</td>
                     <td><input type="reset"></td>
                     <td>초기화 버튼 필드</td>
+                </tr>
+                <tr>
+                    <td>image</td>
+                    <td><input type="image"></td>
+                    <td>이미지가 있는 제출 버튼 필드<br>*alt: 이미지 대체 텍스트</td>
                 </tr>
                 <tr>
                     <td>submit</td>
@@ -90,7 +112,7 @@
                 <tr>
                     <td>text</td>
                     <td><input type="text"></td>
-                    <td>텍스트 입력 필드</td>
+                    <td>텍스트 입력 필드<br>*autocomplete: 자동 완성 기능</td>
                 </tr>
                 <tr>
                     <td>number</td>
@@ -100,22 +122,22 @@
                 <tr>
                     <td>email</td>
                     <td><input type="email"></td>
-                    <td>이메일 입력 필드<br>*multiple: 다수의 이메일 입력 가능</td>
+                    <td>이메일 입력 필드<br>*multiple: 다수의 이메일 입력 가능<br>*autocomplete: 자동 완성 기능</td>
                 </tr>
                 <tr>
                     <td>password</td>
                     <td><input type="password"></td>
-                    <td>비밀번호 입력 필드</td>
+                    <td>비밀번호 입력 필드<br>*autocomplete: 자동 완성 기능</td>
                 </tr>
                 <tr>
                     <td>tel</td>
                     <td><input type="tel"></td>
-                    <td>전화번호 입력 필드</td>
+                    <td>전화번호 입력 필드<br>*autocomplete: 자동 완성 기능</td>
                 </tr>
                 <tr>
                     <td>search</td>
                     <td><input type="search"></td>
-                    <td>검색어 입력 필드</td>
+                    <td>검색어 입력 필드<br>*autocomplete: 자동 완성 기능</td>
                 </tr>
                 <tr>
                     <td>url</td>
@@ -128,6 +150,12 @@
                     <td>숨겨진 입력 필드</td>
                 </tr>
             </table>
+            
+            *focus: 페이지가 로드될 때 포커스가 해당 요소로 이동<br>
+            *dirname: 폼 데이터가 서버로 제출될 때 데이터의 방향성을 저장할 이름<br>
+            *disabled: 폼 비활성화<br>
+            *form: &lt;form&gt; 태그의 id<br>
+            
         </div>
 
 
