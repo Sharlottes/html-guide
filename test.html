@@ -56,8 +56,13 @@
                 x.innerHTML = `<b>${window.innerWidth}/${screen.width} x ${window.innerHeight}/${screen.height}</b>`
             }
 
+            var amount = 0;
+
             test.addEventListener('mouseleave', () => test.innerHTML = `Click me!`);
-            test.addEventListener('mouseover', () => test.innerHTML = `No, Don't click me!`);
+            test.addEventListener('mouseover', () => {
+                if(++amount == 20) alert(`are you kidding me?`);
+                test.innerHTML = `No, Don't click me!`;
+            });
             test.addEventListener('click', () => alert('I SAID DO NOT CLICK ME'));
             window.addEventListener("load", changeColor);
             window.addEventListener("resize", changeColor);
