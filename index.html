@@ -5,9 +5,13 @@
         <meta name="Html Document" description="The korean html document made by sharlotte." content="width=device-width initial-scale=1.0">
         <link href="./styles/style.css" rel="stylesheet" type="text/css">
     </head>
-
+    
     <body>
         <div>
+            <span id="url">url</span><br>
+            <script> 
+                document.getElementById("url").innerHTML = getwindow.location.href;
+            </script>
             <h3 id="midpurple">목차</h3><br>
             <a href="#기본">기본</a><br>
             <a href="#속성">속성</a><br>
